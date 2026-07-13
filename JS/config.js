@@ -1,8 +1,4 @@
-// GitHub repo configuration
+// Central configuration
 const CONFIG = {
-  GITHUB_USERNAME: "Spacklight",   // <-- change this
-  DATA_REPO: "music-share-data",             // repo holding tracks.json + uploads/
-  BRANCH: "main",
-  TRACKS_FILE: "tracks.json",
-  UPLOADS_FOLDER: "uploads"
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzkx5DAjclgVos7bOxm20C9lifeyXjJKwLKtDnks90Dfeh7l-HyFEv7cDN0gdN6YOJWXg/exec"
 };
