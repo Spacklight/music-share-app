@@ -30,6 +30,7 @@
       <button class="icon-btn" title="Messages">✉️</button>
       <button class="icon-btn" title="Notifications">🔔</button>
       <div class="avatar" id="userAvatar" title="Login / Account"></div>
+      <span id="authStatus" class="auth-status">Not logged in</span>
     </div>
   </nav>
 
@@ -51,6 +52,42 @@
     </section>
 
   </main>
+
+  <!-- Hidden file input used by Upload button -->
+  <input type="file" id="fileInput" accept=".mp3,audio/mpeg" style="display:none">
+
+  <!-- ===== Auth Modal ===== -->
+  <div class="modal-overlay" id="authModalOverlay">
+    <div class="modal">
+      <div class="modal-tabs">
+        <button class="modal-tab active" id="loginTab">Login</button>
+        <button class="modal-tab" id="registerTab">Register</button>
+      </div>
+
+      <div class="modal-body">
+        <input type="text" id="authUsername" placeholder="Username">
+        <input type="password" id="authPassword" placeholder="Password">
+        <p class="modal-error" id="authError"></p>
+        <button class="btn btn-primary modal-submit" id="authSubmitBtn">Login</button>
+      </div>
+
+      <button class="modal-close" id="authModalClose">✕</button>
+    </div>
+  </div>
+
+  <!-- ===== Upload Details Modal (title/artist before uploading) ===== -->
+  <div class="modal-overlay" id="uploadModalOverlay">
+    <div class="modal">
+      <h3 class="modal-title">Track Details</h3>
+      <div class="modal-body">
+        <input type="text" id="uploadTitle" placeholder="Track title">
+        <input type="text" id="uploadArtist" placeholder="Artist name">
+        <p class="modal-error" id="uploadError"></p>
+        <button class="btn btn-primary modal-submit" id="uploadSubmitBtn">Upload</button>
+      </div>
+      <button class="modal-close" id="uploadModalClose">✕</button>
+    </div>
+  </div>
 
   <script src="js/config.js"></script>
   <script src="js/auth.js"></script>
